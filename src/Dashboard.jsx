@@ -11,6 +11,7 @@ import ShoppingList from "./ShoppingList";
 import TailwindDemo from "./TailwindDemo";
 import MoodTracker from "./MoodTracker";
 import TradingViewCharts from "./TradingViewCharts";
+import SMSMessenger from "./SMSMessenger";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -961,6 +962,11 @@ function Dashboard() {
         {/* TradingView Charts Section */}
         <div className="mt-8">
           <TradingViewCharts darkMode={darkMode} />
+        </div>
+
+        {/* SMS Messenger Section */}
+        <div className="mt-8">
+          <SMSMessenger darkMode={darkMode} />
         </div>
       </div>
     </div>
