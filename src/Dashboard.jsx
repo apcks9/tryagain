@@ -10,6 +10,7 @@ import EmployeeManager from "./EmployeeManager";
 import ShoppingList from "./ShoppingList";
 import TailwindDemo from "./TailwindDemo";
 import MoodTracker from "./MoodTracker";
+import TradingViewCharts from "./TradingViewCharts";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -955,6 +956,11 @@ function Dashboard() {
         {/* Mood Tracker Section */}
         <div className="mt-8">
           <MoodTracker darkMode={darkMode} />
+        </div>
+
+        {/* TradingView Charts Section */}
+        <div className="mt-8">
+          <TradingViewCharts darkMode={darkMode} />
         </div>
       </div>
     </div>
