@@ -9,6 +9,7 @@ import NetWorthTracker from "./NetWorthTracker";
 import EmployeeManager from "./EmployeeManager";
 import ShoppingList from "./ShoppingList";
 import TailwindDemo from "./TailwindDemo";
+import MoodTracker from "./MoodTracker";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -949,6 +950,11 @@ function Dashboard() {
         {/* Tailwind CSS Demo Section */}
         <div className="mt-8">
           <TailwindDemo darkMode={darkMode} />
+        </div>
+
+        {/* Mood Tracker Section */}
+        <div className="mt-8">
+          <MoodTracker darkMode={darkMode} />
         </div>
       </div>
     </div>
