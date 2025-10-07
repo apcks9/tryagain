@@ -12,6 +12,7 @@ import TailwindDemo from "./TailwindDemo";
 import MoodTracker from "./MoodTracker";
 import TradingViewCharts from "./TradingViewCharts";
 import SMSMessenger from "./SMSMessenger";
+import TwilioSMS from "./TwilioSMS";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -967,6 +968,11 @@ function Dashboard() {
         {/* SMS Messenger Section */}
         <div className="mt-8">
           <SMSMessenger darkMode={darkMode} />
+        </div>
+
+        {/* Twilio SMS Section */}
+        <div className="mt-8">
+          <TwilioSMS darkMode={darkMode} />
         </div>
       </div>
     </div>
