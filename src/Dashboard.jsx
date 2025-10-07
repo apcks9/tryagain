@@ -63,8 +63,18 @@ function Dashboard() {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((u) => {
-      if (u) setUser(u);
-      else navigate("/login");
+      if (u) {
+        setUser(u);
+        // Store current user info for TwilioSMS component
+        localStorage.setItem('currentUser', JSON.stringify({
+          email: u.email,
+          uid: u.uid
+        }));
+      } else {
+        setUser(null);
+        localStorage.removeItem('currentUser');
+        navigate("/login");
+      }
     });
     return () => unsubscribe();
   }, [navigate]);
